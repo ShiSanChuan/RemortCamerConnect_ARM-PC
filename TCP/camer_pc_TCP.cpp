@@ -8,7 +8,7 @@
 #include <netdb.h>
 #include <sys/types.h>
 
-#define portnumber 8080
+// #define portnumber 8080
 #define image_size 320*240 //pc can used is 320*240*4=640*480
 #define command    128
 
@@ -24,6 +24,9 @@ static void On_Mouse(int event,int x,int y,int flags,void*){
 
 int main(int argc, char const *argv[])
 {
+	if(argc<1){std::cout<<"./camer_pc_TCP port";exit(0);}
+	int portnumber=atoi(argv[1]);
+
 	int sockfd,new_fd;
 	struct sockaddr_in server_addr;
 	struct sockaddr_in client_addr;

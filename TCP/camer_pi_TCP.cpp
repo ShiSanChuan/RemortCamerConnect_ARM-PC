@@ -8,11 +8,15 @@
 
 #define image_size 320*240
 #define command    128
-const std::string addr="127.0.0.1";
-const int port=8080;
+// std::string addr="127.0.0.1";
+// const int port=8080;
 
 int main(int argc, char const *argv[])
 {
+	if(argc<3){std::cout<<"./camer_pi_TCP addr port"<<std::endl;exit(0);}
+	std::string addr(argv[1]);
+	int port=atoi(argv[2]);
+
 	cv::Mat frame;
 	cv::VideoCapture cap;
 	cap.open(0);

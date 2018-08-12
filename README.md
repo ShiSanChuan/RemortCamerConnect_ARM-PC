@@ -1,6 +1,8 @@
 # RemortCamerConnect_ARM-PC
 this is a project about how to transmit picture from ARM's camer to Ubuntu'PC, and take opencv's tool detect picture.some obstacle will be recode and give a way to fix.
 
+<!-- <img src=""> -->
+
 
 # bulid 
 on different platform can use this command,file_name and outname is easy to understand,"pkg-config --cflags --libs opencv" is used to link libopencv
@@ -42,3 +44,12 @@ you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`
 	cv::Mat image=cv::Mat(cv::Size(wide,high),CV_8UC1,buffer);
 	cv::imshow("pic",image);
 	```
+- How to use thread liberate in C++?
+	```cpp
+	void func(void*);
+	thread threads;
+	threads=thread(func,void*);
+	threads.detach();//unblock or block:threads.join();
+	...
+	```
+	if we have better choise to use thread ,we can repackage thread lib into a easy used class.
