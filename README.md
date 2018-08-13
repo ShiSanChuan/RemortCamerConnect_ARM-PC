@@ -15,7 +15,7 @@ you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`
 
 
 
-# Some obstacle i have get
+# Some obstacle i have meet
 - TCP&UDP send/recv or sendto/recvfrom buffer problem
 	TCP&UDP buffer have 2^16 byte size(about 65536), so send a picture(640x480)is out this rang,so we have two way to solve this problem,using circulatory transmission or set buffer in linux kernel enviorment:
 	kernel: `/proc/sys/net/core/rmem_default`,`/proc/sys/net/core/wmem_default`,`/proc/sys/net/core/rmem_max`,`/proc/sys/net/core/wmem_max`;
@@ -44,6 +44,17 @@ you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`
 	cv::Mat image=cv::Mat(cv::Size(wide,high),CV_8UC1,buffer);
 	cv::imshow("pic",image);
 	```
+	it seem have a better choise in translate picture by use imencode and imdecode
+	```
+	//imag encode
+	std::vector<int> quality;
+	quality.push_back(CV_IMWRITE_JPEG_QUALITY);
+	quality.push_back(50);
+	cv::imencode(".jpg",Mat imag,std::vector<uchar>& send_buffer,quality);
+	//imag decode
+	cv:: Mat image=cv::imdecode(vector<uchar> & recv_buffer,CV_LOAD_IMAGE_COLOR);
+	```
+
 - How to use thread liberate in C++?
 	```cpp
 	void func(void*);

@@ -5,11 +5,10 @@
 #include <arpa/inet.h>
 #include <sys/shm.h>
 #include <unistd.h>  //close() headfile 
+#include <vector>
 
-#define image_size 320*240
+#define image_size 65500  
 #define command    128
-// std::string addr="127.0.0.1";
-// const int port=8080;
 
 int main(int argc, char const *argv[])
 {
@@ -21,7 +20,7 @@ int main(int argc, char const *argv[])
 	cv::VideoCapture cap;
 	cap.open(0);
 
-	unsigned char *image_buffer=new unsigned char[image_size*4];
+	unsigned char *image_buffer=new unsigned char[image_size];
 	unsigned char *command_buffer=new unsigned char[command];
 	int sock_cli;
 	sock_cli=socket(AF_INET,SOCK_STREAM,0);
@@ -34,19 +33,20 @@ int main(int argc, char const *argv[])
 		return false;
 	}
 
+	std::vector<uchar> data_encode;
+	std::vector<int> quality;
+	quality.push_back(CV_IMWRITE_JPEG_QUALITY);
+	quality.push_back(50);
 	while(1){
 		cap>>frame;
 		cv::resize(frame,frame,cv::Size(640,480));
-		cv::cvtColor(frame, frame, cv::COLOR_RGB2GRAY);
-		unsigned char *_image_buffer=frame.data;
-		memcpy(image_buffer, _image_buffer, image_size*4);
-
-		// recv(sock_cli,command_buffer,command,0);//using to command
-		for(int i=0;i<4;i++){
-	    	send(sock_cli,image_buffer+image_size*i,image_size,0);
-			cv::waitKey(6);
-		} 
-	    
+		cv::imencode(".jpg", frame,data_encode,quality);
+		sprintf((char*)command_buffer,"%d\t",(int)data_encode.size());
+		send(sock_cli, command_buffer,command,0);
+		for(int i=0;i<data_encode.size();i++)
+			image_buffer[i]=data_encode[i];
+		send(sock_cli,image_buffer,(int)data_encode.size(),0);
+		std::cout<<data_encode.size()<<std::endl;
 	}
 	
 	delete []image_buffer;

@@ -9,7 +9,7 @@
 #include <sys/types.h>
 
 // #define portnumber 8080
-#define image_size 320*240 //pc can used is 320*240*4=640*480
+#define image_size 65500 //pc can used is 320*240*4=640*480
 #define command    128
 
 cv::Point2f point;
@@ -24,14 +24,14 @@ static void On_Mouse(int event,int x,int y,int flags,void*){
 
 int main(int argc, char const *argv[])
 {
-	if(argc<1){std::cout<<"./camer_pc_TCP port";exit(0);}
+	if(argc<2){std::cout<<"Usag: ./camer_pc_TCP port "<<std::endl;exit(0);}
 	int portnumber=atoi(argv[1]);
 
 	int sockfd,new_fd;
 	struct sockaddr_in server_addr;
 	struct sockaddr_in client_addr;
 	socklen_t sin_size;
-	unsigned char *image_buffer=new unsigned char[image_size*16];
+	unsigned char *image_buffer=new unsigned char[image_size*4];
 	unsigned char *command_buffer=new unsigned char[command];
 
 	if((sockfd=socket(AF_INET,SOCK_STREAM,0))==-1){
@@ -66,16 +66,21 @@ int main(int argc, char const *argv[])
 	cv::Mat preimage;
 	std::vector<cv::Point2f> points[2];
 	cv::TermCriteria termcrit(cv::TermCriteria::COUNT|cv::TermCriteria::EPS,20,0.03);
-	
-	while(char(cv::waitKey(1))!='q'){
-		// send(new_fd,command_buffer,command,0);
-		for(int i=0;i<4;i++){
-			recv(new_fd,image_buffer+image_size*i,image_size,0);
-			// cv::waitKey(6);
-		}
 
-		cv::Mat image=cv::Mat(cv::Size(640,480),CV_8UC1,image_buffer);
-		// cv::resize(image, image, cv::Size(640,480));
+	std::vector<uchar> data_decode;
+	int size=0;
+	while(char(cv::waitKey(1))!='q'){
+		data_decode.clear();
+		recv(new_fd,command_buffer,command,0);
+		size=atoi((char*)command_buffer);
+		int recv_size=recv(new_fd, image_buffer,size,0);
+		// if(recv_size!=size)continue;
+		std::cout<<recv_size<<"\t"<<size<<std::endl;
+		for(int i=0;i<recv_size;i++)
+			data_decode.push_back(image_buffer[i]);
+		cv::Mat image=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
+
+		cv::cvtColor(image, image, cv::COLOR_RGB2GRAY);
 		if(!points[0].empty()){
 			std::vector<uchar> status;
 			std::vector<float> err;
