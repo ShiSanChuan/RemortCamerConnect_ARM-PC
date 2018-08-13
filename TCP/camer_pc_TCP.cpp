@@ -76,7 +76,7 @@ int main(int argc, char const *argv[])
 		recv(new_fd,command_buffer,command,0);
 		size=atoi((char*)command_buffer);
 		int recv_size=recv(new_fd, image_buffer,size,0);
-		std::cout<<recv_size<<"\t"<<size<<std::endl;
+		// std::cout<<recv_size<<"\t"<<size<<std::endl;
 		if(recv_size!=size||recv_size<10000)continue;
 
 		for(int i=0;i<recv_size;i++)
@@ -111,14 +111,18 @@ int main(int argc, char const *argv[])
 		//find circles
 		std::vector<cv::Vec3f> circles;
 		cv::blur(gray, grayblur, cv::Size(3,3));
-		cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.rows/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT,10,80);
+		cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.rows/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT,10,50);
 		if(circles.size()){
+			if(points[0].empty()){
+				points[1].push_back(cv::Point2f(float(circles[0][0]),float(circles[0][1])));
+			}else{
+				
+			}
 			cv::Point center(cvRound(circles[0][0]), cvRound(circles[0][1]));
 	        int radius = cvRound(circles[0][2]);
 	        cv::circle( image, center, 3, cv::Scalar(0,255,0), -1, 8, 0 );
 	        cv::circle( image, center, radius, cv::Scalar(0,0,255), 3, 8, 0 );
 		}
-
 		cv::imshow("demo", image);
 		std::swap(points[1], points[0]);
 		cv::swap(pregray, gray);
