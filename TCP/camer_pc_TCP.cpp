@@ -63,29 +63,32 @@ int main(int argc, char const *argv[])
 
 	cv::namedWindow("demo",cv::WINDOW_AUTOSIZE);
 	cv::setMouseCallback("demo", On_Mouse,0);
-	cv::Mat preimage;
+	cv::Mat pregray,gray,grayblur;
 	std::vector<cv::Point2f> points[2];
 	cv::TermCriteria termcrit(cv::TermCriteria::COUNT|cv::TermCriteria::EPS,20,0.03);
 
 	std::vector<uchar> data_decode;
 	int size=0;
-	while(char(cv::waitKey(1))!='q'){
+	bool flag=true;
+	while(flag){
+		//recv imag
 		data_decode.clear();
 		recv(new_fd,command_buffer,command,0);
 		size=atoi((char*)command_buffer);
 		int recv_size=recv(new_fd, image_buffer,size,0);
-		// if(recv_size!=size)continue;
 		std::cout<<recv_size<<"\t"<<size<<std::endl;
+		if(recv_size!=size||recv_size<10000)continue;
+
 		for(int i=0;i<recv_size;i++)
 			data_decode.push_back(image_buffer[i]);
 		cv::Mat image=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
-
-		cv::cvtColor(image, image, cv::COLOR_RGB2GRAY);
+		// use calcOptialFlowPyrLK
+		cv::cvtColor(image, gray, cv::COLOR_RGB2GRAY);
 		if(!points[0].empty()){
 			std::vector<uchar> status;
 			std::vector<float> err;
-			if(preimage.empty())image.copyTo(preimage);
-			cv::calcOpticalFlowPyrLK(preimage, image, points[0], points[1],status,err,cv::Size(31,31));
+			if(pregray.empty())gray.copyTo(pregray);
+			cv::calcOpticalFlowPyrLK(pregray, gray, points[0], points[1],status,err,cv::Size(31,31));
 			int k=0;
 			for(int i=0;i<points[1].size();i++){
 				if(addremovept&&cv::norm(point-points[1][i])<=5){
@@ -101,17 +104,31 @@ int main(int argc, char const *argv[])
 		if(addremovept&&points[1].size()<20){
 			std::vector<cv::Point2f> tmp;
 			tmp.push_back(point);
-			cv::cornerSubPix(image, tmp, cv::Size(10,10), cv::Size(-1,-1), termcrit);
+			cv::cornerSubPix(gray, tmp, cv::Size(10,10), cv::Size(-1,-1), termcrit);
 			points[1].push_back(tmp[0]);
 			addremovept=false;
 		}
+		//find circles
+		std::vector<cv::Vec3f> circles;
+		cv::blur(gray, grayblur, cv::Size(3,3));
+		cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.rows/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT,10,80);
+		if(circles.size()){
+			cv::Point center(cvRound(circles[0][0]), cvRound(circles[0][1]));
+	        int radius = cvRound(circles[0][2]);
+	        cv::circle( image, center, 3, cv::Scalar(0,255,0), -1, 8, 0 );
+	        cv::circle( image, center, radius, cv::Scalar(0,0,255), 3, 8, 0 );
+		}
+
 		cv::imshow("demo", image);
 		std::swap(points[1], points[0]);
-		cv::swap(preimage, image);
+		cv::swap(pregray, gray);
 		switch(char(cv::waitKey(1))){
 			case 'r':
 			points[1].clear();
 			points[0].clear();
+			break;
+			case 'q':
+			flag=false;
 			break;
 		}
 	}
