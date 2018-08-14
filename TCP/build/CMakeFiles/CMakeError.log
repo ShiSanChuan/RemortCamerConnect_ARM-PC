@@ -1,0 +1,64 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d9f31/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9f31.dir/build.make CMakeFiles/cmTC_d9f31.dir/build
+make[1]: Entering directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9f31.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d9f31.dir/CheckSymbolExists.c.o   -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d9f31
+/opt/cmake-3.12.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9f31.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d9f31.dir/CheckSymbolExists.c.o  -o cmTC_d9f31 
+CMakeFiles/cmTC_d9f31.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d9f31.dir/build.make:86: recipe for target 'cmTC_d9f31' failed
+make[1]: *** [cmTC_d9f31] Error 1
+make[1]: Leaving directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_d9f31/fast' failed
+make: *** [cmTC_d9f31/fast] Error 2
+
+File /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file pthread.h exists failed with the following output:
+Change Dir: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2238/fast"
+make[1]: Entering directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+make[1]: *** No rule to make target 'cmTC_b2238/fast'。 停止。
+make[1]: Leaving directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_85ac6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85ac6.dir/build.make CMakeFiles/cmTC_85ac6.dir/build
+make[1]: Entering directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o   -c /opt/cmake-3.12.0/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_85ac6
+/opt/cmake-3.12.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85ac6.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o  -o cmTC_85ac6 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_85ac6.dir/build.make:86: recipe for target 'cmTC_85ac6' failed
+make[1]: *** [cmTC_85ac6] Error 1
+make[1]: Leaving directory '/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_85ac6/fast' failed
+make: *** [cmTC_85ac6/fast] Error 2
+
+

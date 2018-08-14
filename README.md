@@ -6,14 +6,24 @@ this is a project about how to transmit picture from ARM's camer to Ubuntu'PC, a
 
 # bulid 
 on different platform can use this command,file_name and outname is easy to understand,"pkg-config --cflags --libs opencv" is used to link libopencv
+~~~
 ```shell
 g++ -std=c++11 {file_name} -o {outname} `pkg-config --cflags --libs opencv`
+```
+*Server* : ./camer -s 8080
+*Client* : ./camer -c 127.0.0.1 8080
+~~~
+```shell
+cd RemortCamerConnect_ARM-PC/TCP/
+cmake .
+cd build/src
+./camer -s 8080
 ```
 
 # How to use
 you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`
-
-
+*Server* : ./camer -s 8080
+*Client* : ./camer -c 127.0.0.1 8080
 
 # Some obstacle i have meet
 - TCP&UDP send/recv or sendto/recvfrom buffer problem
@@ -63,4 +73,22 @@ you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`
 	threads.detach();//unblock or block:threads.join();
 	...
 	```
+	if we want to creat a class to manage thread easily:
+	```cpp
+	int mythread::Add(void (*fun)(void)){
+	threads.push_back(std::thread(fun));
+	std::cout<<">>>"<<threads.size()<<std::endl;
+	threads[threads.size()-1].detach();
+	return 0;
+	}
+	...
+	mythread m;
+	m.Add([]{std::cout<<"ffff"<<std::endl;});
+	```
 	if we have better choise to use thread ,we can repackage thread lib into a easy used class.
+- CMakeLists.txt enable opencvlib and threadlib
+	```make
+	FIND_PACKAGE( OpenCV REQUIRED ) 
+	FIND_PACKAGE ( Threads REQUIRED )
+	TARGET_LINK_LIBRARIES(camer ${OpenCV_LIBS} ${CMAKE_THREAD_LIBS_INIT})
+	```

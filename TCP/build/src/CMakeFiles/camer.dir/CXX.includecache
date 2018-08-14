@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp
+iostream
+-
+thread
+-
+vector
+-
+

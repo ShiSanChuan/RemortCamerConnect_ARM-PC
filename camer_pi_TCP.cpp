@@ -46,7 +46,7 @@ int main(int argc, char const *argv[])
 		for(int i=0;i<data_encode.size();i++)
 			image_buffer[i]=data_encode[i];
 		send(sock_cli,image_buffer,(int)data_encode.size(),0);
-		std::cout<<data_encode.size()<<std::endl;
+		// std::cout<<data_encode.size()<<std::endl;
 	}
 	
 	delete []image_buffer;

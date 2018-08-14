@@ -75,8 +75,8 @@ int main(int argc, char const *argv[])
 		data_decode.clear();
 		recv(new_fd,command_buffer,command,0);
 		size=atoi((char*)command_buffer);
-		int recv_size=recv(new_fd, image_buffer,size,0);
-		// std::cout<<recv_size<<"\t"<<size<<std::endl;
+		int recv_size=recv(new_fd, image_buffer,image_size,0);
+		std::cout<<recv_size<<"\t"<<size<<std::endl;
 		if(recv_size!=size||recv_size<10000)continue;
 
 		for(int i=0;i<recv_size;i++)
