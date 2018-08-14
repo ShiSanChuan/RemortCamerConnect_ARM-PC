@@ -1,6 +1,8 @@
 #include <iostream>
+#include <opencv2/opencv.hpp>
 #include <unistd.h>
 #include <thread>
+#include <mutex>
 #include <vector>
 #include <map>
 
@@ -9,14 +11,16 @@ class mythread
 private:
 	std::vector<std::thread> threads;
 	std::map<std::string,int> Map;
+	std::mutex m;
 public:
-	mythread();
+	mythread(){}
+	mythread(cv::Mat image);
 	~mythread();
 	int Add(const std::string name,void (*fun)(void));
 	int Delete(const std::string name); 
 };
 
-mythread::mythread(){
+mythread::mythread(cv::Mat image){
 	
 }
 mythread::~mythread(){
@@ -33,7 +37,6 @@ int mythread::Add(const std::string name,void (*fun)(void)){
 	return 0;
 }
 int mythread::Delete(const std::string name){
-	// TerminateThread(threads[1]);
 	return 0;
 }
 
