@@ -5,7 +5,7 @@
 #include <iostream>
 
 cv::Vec3f findCirclse(cv::Mat &gray);
-
+void calcOptialFlow(cv::Mat gray,cv::Point2f & point);
 
 
 

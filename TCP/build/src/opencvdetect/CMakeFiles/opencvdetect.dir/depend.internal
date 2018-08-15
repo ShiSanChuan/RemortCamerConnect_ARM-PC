@@ -9,6 +9,7 @@ src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o
+ ../include/detect.h
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp

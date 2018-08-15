@@ -8,6 +8,7 @@ src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o: ../src/opencvdetect/
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o: ../src/opencvdetect/SURF.cpp
 
+src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o: ../include/detect.h
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o: ../src/opencvdetect/calcOpicalFlow.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o: ../src/opencvdetect/goodFeatures.cpp

@@ -37,7 +37,8 @@ cv::Vec3f findCirclse(cv::Mat &gray){
 	if(circles.size()){
 		return circles[0];
 	}
-	return NULL;
+	circles.push_back(cv::Vec3f(-1,-1,-1));
+	return circles[0];
 }
 
 
