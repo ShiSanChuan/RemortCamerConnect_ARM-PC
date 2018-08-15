@@ -3,9 +3,11 @@
 
 src/CMakeFiles/camer.dir/main.cpp.o
  ../include/mytcp.h
+ ../include/mythread.h
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp
 src/CMakeFiles/camer.dir/mytcp.cpp.o
  ../include/mytcp.h
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp
 src/CMakeFiles/camer.dir/mythread.cpp.o
+ ../include/mythread.h
  /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp

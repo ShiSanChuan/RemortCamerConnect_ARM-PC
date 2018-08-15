@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/detect.h
+opencv2/opencv.hpp
+-
+iostream
+-
+
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp
+detect.h
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/detect.h
+
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
+iostream
+-
+opencv2/opencv.hpp
+-
+
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
+iostream
+-
+opencv2/opencv.hpp
+-
+opencv2/nonfree/nonfree.hpp
+-
+
+/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
+opencv2/opencv.hpp
+-
+iostream
+-
+

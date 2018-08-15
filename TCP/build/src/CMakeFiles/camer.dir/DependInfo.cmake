@@ -18,6 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

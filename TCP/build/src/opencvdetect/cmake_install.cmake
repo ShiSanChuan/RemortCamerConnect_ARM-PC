@@ -1,4 +1,4 @@
-# Install script for directory: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src
+# Install script for directory: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -35,11 +35,5 @@ endif()
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/cmake_install.cmake")
-
 endif()
 

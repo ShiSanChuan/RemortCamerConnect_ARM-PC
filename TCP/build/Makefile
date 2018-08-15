@@ -123,6 +123,19 @@ camer/fast:
 	$(MAKE) -f src/CMakeFiles/camer.dir/build.make src/CMakeFiles/camer.dir/build
 .PHONY : camer/fast
 
+#=============================================================================
+# Target rules for targets named opencvdetect
+
+# Build rule for target.
+opencvdetect: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 opencvdetect
+.PHONY : opencvdetect
+
+# fast build rule for target.
+opencvdetect/fast:
+	$(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/build
+.PHONY : opencvdetect/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -132,6 +145,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... camer"
+	@echo "... opencvdetect"
 .PHONY : help
 
 

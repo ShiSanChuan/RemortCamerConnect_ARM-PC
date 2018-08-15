@@ -21,8 +21,8 @@ cd build/src
 
 # How to use
 ~~you must first run `**pc_**.cpp`,and then run `**pi_**.cpp`~~
-Server : ./camer -s 8080
-Client : ./camer -c 127.0.0.1 8080
+- Server : ./camer -s 8080
+- Client : ./camer -c 127.0.0.1 8080
 
 # Some obstacle i have meet
 - TCP&UDP send/recv or sendto/recvfrom buffer problem
@@ -83,6 +83,10 @@ Client : ./camer -c 127.0.0.1 8080
 	...
 	mythread m;
 	m.Add([]{std::cout<<"ffff"<<std::endl;});
+	```
+	mutilthread have a comment parameter by used std::ref():
+	```
+	std::thread(fun,std::ref(str));
 	```
 	if we have better choise to use thread ,we can repackage thread lib into a easy used class.
 - CMakeLists.txt enable opencvlib and threadlib

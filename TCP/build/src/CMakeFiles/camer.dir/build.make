@@ -114,6 +114,7 @@ src/camer: /usr/lib/x86_64-linux-gnu/libopencv_ts.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_superres.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_stitching.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_contrib.so.2.4.9
+src/camer: src/opencvdetect/libopencvdetect.a
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_nonfree.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_ocl.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_gpu.so.2.4.9

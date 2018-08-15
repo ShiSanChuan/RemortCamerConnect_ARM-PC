@@ -12,6 +12,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.12.0/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.12.0/CMakeSystem.cmake"
   "../src/CMakeLists.txt"
+  "../src/opencvdetect/CMakeLists.txt"
   "/opt/cmake-3.12.0/share/cmake-3.12/Modules/CMakeCInformation.cmake"
   "/opt/cmake-3.12.0/share/cmake-3.12/Modules/CMakeCXXInformation.cmake"
   "/opt/cmake-3.12.0/share/cmake-3.12/Modules/CMakeCommonLanguageInclude.cmake"
@@ -51,9 +52,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/opencvdetect/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "src/CMakeFiles/camer.dir/DependInfo.cmake"
+  "src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake"
   )

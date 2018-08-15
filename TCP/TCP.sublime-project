@@ -19,6 +19,10 @@
 				{
 					"name": "camer",
 					"shell_cmd": "make -j4 camer"
+				},
+				{
+					"name": "opencvdetect",
+					"shell_cmd": "make -j4 opencvdetect"
 				}
 			],
 			"working_dir": "${project_path}/build"

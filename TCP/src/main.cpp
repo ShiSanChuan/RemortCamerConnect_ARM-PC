@@ -1,6 +1,8 @@
 #include <iostream>
 #include <thread>
+#include <mutex>
 #include "mytcp.h"
+#include "mythread.h"
 //camer -s port
 //camer -c addr port
 using std::string;

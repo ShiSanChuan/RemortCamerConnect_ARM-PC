@@ -1,3 +1,6 @@
+#ifndef _MYTCP_H
+#define _MYTCP_H
+
 #include <iostream>
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -38,3 +41,5 @@ public:
 		if(new_fd>0)close(new_fd);
 	}
 };
+
+#endif
