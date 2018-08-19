@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build
 
 # Include any dependencies generated for this target.
 include src/opencvdetect/CMakeFiles/opencvdetect.dir/depend.make
@@ -59,68 +59,68 @@ include src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o: src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o: ../src/opencvdetect/HoughLine.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/HoughLine.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/HoughLine.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencvdetect.dir/HoughLine.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp > CMakeFiles/opencvdetect.dir/HoughLine.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp > CMakeFiles/opencvdetect.dir/HoughLine.cpp.i
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencvdetect.dir/HoughLine.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp -o CMakeFiles/opencvdetect.dir/HoughLine.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp -o CMakeFiles/opencvdetect.dir/HoughLine.cpp.s
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o: src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o: ../src/opencvdetect/Inpaint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/Inpaint.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/Inpaint.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencvdetect.dir/Inpaint.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp > CMakeFiles/opencvdetect.dir/Inpaint.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp > CMakeFiles/opencvdetect.dir/Inpaint.cpp.i
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencvdetect.dir/Inpaint.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp -o CMakeFiles/opencvdetect.dir/Inpaint.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp -o CMakeFiles/opencvdetect.dir/Inpaint.cpp.s
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o: src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o: ../src/opencvdetect/SURF.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/SURF.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/SURF.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencvdetect.dir/SURF.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp > CMakeFiles/opencvdetect.dir/SURF.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp > CMakeFiles/opencvdetect.dir/SURF.cpp.i
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencvdetect.dir/SURF.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp -o CMakeFiles/opencvdetect.dir/SURF.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp -o CMakeFiles/opencvdetect.dir/SURF.cpp.s
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o: src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o: ../src/opencvdetect/calcOpicalFlow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp > CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp > CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp -o CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp -o CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o: src/opencvdetect/CMakeFiles/opencvdetect.dir/flags.make
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o: ../src/opencvdetect/goodFeatures.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp > CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp > CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp -o CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp -o CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s
 
 # Object files for target opencvdetect
 opencvdetect_OBJECTS = \
@@ -140,9 +140,9 @@ src/opencvdetect/libopencvdetect.a: src/opencvdetect/CMakeFiles/opencvdetect.dir
 src/opencvdetect/libopencvdetect.a: src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o
 src/opencvdetect/libopencvdetect.a: src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make
 src/opencvdetect/libopencvdetect.a: src/opencvdetect/CMakeFiles/opencvdetect.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libopencvdetect.a"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -P CMakeFiles/opencvdetect.dir/cmake_clean_target.cmake
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opencvdetect.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libopencvdetect.a"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -P CMakeFiles/opencvdetect.dir/cmake_clean_target.cmake
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opencvdetect.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/opencvdetect/CMakeFiles/opencvdetect.dir/build: src/opencvdetect/libopencvdetect.a
@@ -150,10 +150,10 @@ src/opencvdetect/CMakeFiles/opencvdetect.dir/build: src/opencvdetect/libopencvde
 .PHONY : src/opencvdetect/CMakeFiles/opencvdetect.dir/build
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/clean:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -P CMakeFiles/opencvdetect.dir/cmake_clean.cmake
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect && $(CMAKE_COMMAND) -P CMakeFiles/opencvdetect.dir/cmake_clean.cmake
 .PHONY : src/opencvdetect/CMakeFiles/opencvdetect.dir/clean
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/depend:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/opencvdetect/CMakeFiles/opencvdetect.dir/depend
 

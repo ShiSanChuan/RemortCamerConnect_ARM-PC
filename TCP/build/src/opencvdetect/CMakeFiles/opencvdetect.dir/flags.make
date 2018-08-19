@@ -6,5 +6,5 @@ CXX_FLAGS =   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/include -I/usr/include/opencv 
+CXX_INCLUDES = -I/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/include -I/usr/include/opencv 
 

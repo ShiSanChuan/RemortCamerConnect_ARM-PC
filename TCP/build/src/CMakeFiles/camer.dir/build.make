@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/camer.dir/depend.make
@@ -59,42 +59,42 @@ include src/CMakeFiles/camer.dir/flags.make
 
 src/CMakeFiles/camer.dir/main.cpp.o: src/CMakeFiles/camer.dir/flags.make
 src/CMakeFiles/camer.dir/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/camer.dir/main.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/main.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/camer.dir/main.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/main.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp
 
 src/CMakeFiles/camer.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/camer.dir/main.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp > CMakeFiles/camer.dir/main.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp > CMakeFiles/camer.dir/main.cpp.i
 
 src/CMakeFiles/camer.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/camer.dir/main.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp -o CMakeFiles/camer.dir/main.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp -o CMakeFiles/camer.dir/main.cpp.s
 
 src/CMakeFiles/camer.dir/mytcp.cpp.o: src/CMakeFiles/camer.dir/flags.make
 src/CMakeFiles/camer.dir/mytcp.cpp.o: ../src/mytcp.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/camer.dir/mytcp.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/mytcp.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/camer.dir/mytcp.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/mytcp.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp
 
 src/CMakeFiles/camer.dir/mytcp.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/camer.dir/mytcp.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp > CMakeFiles/camer.dir/mytcp.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp > CMakeFiles/camer.dir/mytcp.cpp.i
 
 src/CMakeFiles/camer.dir/mytcp.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/camer.dir/mytcp.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp -o CMakeFiles/camer.dir/mytcp.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp -o CMakeFiles/camer.dir/mytcp.cpp.s
 
 src/CMakeFiles/camer.dir/mythread.cpp.o: src/CMakeFiles/camer.dir/flags.make
 src/CMakeFiles/camer.dir/mythread.cpp.o: ../src/mythread.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/camer.dir/mythread.cpp.o"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/mythread.cpp.o -c /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/camer.dir/mythread.cpp.o"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/camer.dir/mythread.cpp.o -c /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp
 
 src/CMakeFiles/camer.dir/mythread.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/camer.dir/mythread.cpp.i"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp > CMakeFiles/camer.dir/mythread.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp > CMakeFiles/camer.dir/mythread.cpp.i
 
 src/CMakeFiles/camer.dir/mythread.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/camer.dir/mythread.cpp.s"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp -o CMakeFiles/camer.dir/mythread.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp -o CMakeFiles/camer.dir/mythread.cpp.s
 
 # Object files for target camer
 camer_OBJECTS = \
@@ -130,8 +130,8 @@ src/camer: /usr/lib/x86_64-linux-gnu/libopencv_imgproc.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_flann.so.2.4.9
 src/camer: /usr/lib/x86_64-linux-gnu/libopencv_core.so.2.4.9
 src/camer: src/CMakeFiles/camer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable camer"
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/camer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable camer"
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/camer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/camer.dir/build: src/camer
@@ -139,10 +139,10 @@ src/CMakeFiles/camer.dir/build: src/camer
 .PHONY : src/CMakeFiles/camer.dir/build
 
 src/CMakeFiles/camer.dir/clean:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && $(CMAKE_COMMAND) -P CMakeFiles/camer.dir/cmake_clean.cmake
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src && $(CMAKE_COMMAND) -P CMakeFiles/camer.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/camer.dir/clean
 
 src/CMakeFiles/camer.dir/depend:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/CMakeFiles/camer.dir/depend
 

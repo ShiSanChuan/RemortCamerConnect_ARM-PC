@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+../include/detect.h
+opencv2/opencv.hpp
+-
+iostream
+-
+
 ../include/mytcp.h
 iostream
 -
@@ -28,7 +34,33 @@ string
 opencv2/opencv.hpp
 -
 
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp
+../include/mythread.h
+iostream
+-
+opencv2/opencv.hpp
+-
+unistd.h
+-
+thread
+-
+chrono
+-
+vector
+-
+map
+-
+
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp
+iostream
+-
+thread
+-
+mutex
+-
 mytcp.h
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.h
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.h
+mythread.h
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.h
+detect.h
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/detect.h
 

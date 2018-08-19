@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/cmake-3.12.0/bin/cmake
+CMAKE_COMMAND = /usr/local/bin/cmake
 
 # The command to remove a file.
-RM = /opt/cmake-3.12.0/bin/cmake -E remove -f
+RM = /usr/local/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP
+CMAKE_SOURCE_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build
+CMAKE_BINARY_DIR = /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/opt/cmake-3.12.0/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/usr/local/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -69,8 +69,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/opt/cmake-3.12.0/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/local/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/progress.marks
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles 0
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/progress.marks
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/clean
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/preinstall
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/preinstall
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/opencvdetect/CMakeFiles/opencvdetect.dir/rule:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/CMakeFiles/opencvdetect.dir/rule
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f CMakeFiles/Makefile2 src/opencvdetect/CMakeFiles/opencvdetect.dir/rule
 .PHONY : src/opencvdetect/CMakeFiles/opencvdetect.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ opencvdetect: src/opencvdetect/CMakeFiles/opencvdetect.dir/rule
 
 # fast build rule for target.
 opencvdetect/fast:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/build
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/build
 .PHONY : opencvdetect/fast
 
 HoughLine.o: HoughLine.cpp.o
@@ -131,7 +131,7 @@ HoughLine.o: HoughLine.cpp.o
 
 # target to build an object file
 HoughLine.cpp.o:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o
 .PHONY : HoughLine.cpp.o
 
 HoughLine.i: HoughLine.cpp.i
@@ -140,7 +140,7 @@ HoughLine.i: HoughLine.cpp.i
 
 # target to preprocess a source file
 HoughLine.cpp.i:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.i
 .PHONY : HoughLine.cpp.i
 
 HoughLine.s: HoughLine.cpp.s
@@ -149,7 +149,7 @@ HoughLine.s: HoughLine.cpp.s
 
 # target to generate assembly for a file
 HoughLine.cpp.s:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.s
 .PHONY : HoughLine.cpp.s
 
 Inpaint.o: Inpaint.cpp.o
@@ -158,7 +158,7 @@ Inpaint.o: Inpaint.cpp.o
 
 # target to build an object file
 Inpaint.cpp.o:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o
 .PHONY : Inpaint.cpp.o
 
 Inpaint.i: Inpaint.cpp.i
@@ -167,7 +167,7 @@ Inpaint.i: Inpaint.cpp.i
 
 # target to preprocess a source file
 Inpaint.cpp.i:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.i
 .PHONY : Inpaint.cpp.i
 
 Inpaint.s: Inpaint.cpp.s
@@ -176,7 +176,7 @@ Inpaint.s: Inpaint.cpp.s
 
 # target to generate assembly for a file
 Inpaint.cpp.s:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.s
 .PHONY : Inpaint.cpp.s
 
 SURF.o: SURF.cpp.o
@@ -185,7 +185,7 @@ SURF.o: SURF.cpp.o
 
 # target to build an object file
 SURF.cpp.o:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o
 .PHONY : SURF.cpp.o
 
 SURF.i: SURF.cpp.i
@@ -194,7 +194,7 @@ SURF.i: SURF.cpp.i
 
 # target to preprocess a source file
 SURF.cpp.i:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.i
 .PHONY : SURF.cpp.i
 
 SURF.s: SURF.cpp.s
@@ -203,7 +203,7 @@ SURF.s: SURF.cpp.s
 
 # target to generate assembly for a file
 SURF.cpp.s:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.s
 .PHONY : SURF.cpp.s
 
 calcOpicalFlow.o: calcOpicalFlow.cpp.o
@@ -212,7 +212,7 @@ calcOpicalFlow.o: calcOpicalFlow.cpp.o
 
 # target to build an object file
 calcOpicalFlow.cpp.o:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o
 .PHONY : calcOpicalFlow.cpp.o
 
 calcOpicalFlow.i: calcOpicalFlow.cpp.i
@@ -221,7 +221,7 @@ calcOpicalFlow.i: calcOpicalFlow.cpp.i
 
 # target to preprocess a source file
 calcOpicalFlow.cpp.i:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.i
 .PHONY : calcOpicalFlow.cpp.i
 
 calcOpicalFlow.s: calcOpicalFlow.cpp.s
@@ -230,7 +230,7 @@ calcOpicalFlow.s: calcOpicalFlow.cpp.s
 
 # target to generate assembly for a file
 calcOpicalFlow.cpp.s:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.s
 .PHONY : calcOpicalFlow.cpp.s
 
 goodFeatures.o: goodFeatures.cpp.o
@@ -239,7 +239,7 @@ goodFeatures.o: goodFeatures.cpp.o
 
 # target to build an object file
 goodFeatures.cpp.o:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o
 .PHONY : goodFeatures.cpp.o
 
 goodFeatures.i: goodFeatures.cpp.i
@@ -248,7 +248,7 @@ goodFeatures.i: goodFeatures.cpp.i
 
 # target to preprocess a source file
 goodFeatures.cpp.i:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.i
 .PHONY : goodFeatures.cpp.i
 
 goodFeatures.s: goodFeatures.cpp.s
@@ -257,7 +257,7 @@ goodFeatures.s: goodFeatures.cpp.s
 
 # target to generate assembly for a file
 goodFeatures.cpp.s:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(MAKE) -f src/opencvdetect/CMakeFiles/opencvdetect.dir/build.make src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.s
 .PHONY : goodFeatures.cpp.s
 
 # Help Target
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp" "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/main.cpp.o"
-  "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp" "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/mytcp.cpp.o"
-  "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp" "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/mythread.cpp.o"
+  "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/main.cpp" "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/main.cpp.o"
+  "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mytcp.cpp" "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/mytcp.cpp.o"
+  "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/mythread.cpp" "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir/mythread.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -18,7 +18,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake"
+  "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

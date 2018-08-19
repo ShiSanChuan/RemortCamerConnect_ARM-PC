@@ -1,4 +1,4 @@
-# Install script for directory: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP
+# Install script for directory: /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/cmake_install.cmake")
+  include("/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

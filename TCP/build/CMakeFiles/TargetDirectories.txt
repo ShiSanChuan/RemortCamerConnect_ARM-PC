@@ -1,8 +1,8 @@
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/rebuild_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/edit_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/edit_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/rebuild_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/rebuild_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/edit_cache.dir
-/home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/rebuild_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/CMakeFiles/edit_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/edit_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/rebuild_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/CMakeFiles/camer.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/rebuild_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/edit_cache.dir
+/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/build/src/opencvdetect/CMakeFiles/opencvdetect.dir

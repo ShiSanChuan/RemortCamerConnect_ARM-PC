@@ -63,9 +63,9 @@ int mytcp::recvcommand(std::string & buffer,int _size){
 	if(new_fd==-1)fd=sockfd;// client recv
 	else fd=new_fd;
 	for(int recv_size=1;size<_size&&recv_size!=0;size+=recv_size){
-		std::cout<<recv_size<<"\t";
 		recv_size=recv(fd,command_buffer+recv_size,command,0);
 	}
+	command_buffer[size]=0x0;
 	buffer=std::string((char*)&command_buffer[1]);
 	return size;
 }
@@ -86,33 +86,35 @@ int mytcp::recvimage(cv::Mat & image,int _size){
 
 	//befor recvier a image ,get image size 
 	std::string _image_size;
-	std::cout<<recvcommand(_image_size)<<"\t"<<_image_size<<std::endl;
+	recvcommand(_image_size);
 	_size=atoi(_image_size.data());
-
 
 	for(int recv_size=1;size<_size&&recv_size!=0;size+=recv_size)
 		recv_size=recv(new_fd, image_buffer+recv_size,image_size,0);
 
 	if(size<10000)return -1;
+
 	for(int i=1;i<size;i++)
 			data_decode.push_back(image_buffer[i]);
+
+
 	image=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
 	return size;
 }
 int mytcp::sendcommand(const std::string & buffer,int _size){
 	int fd;
-	if(new_fd!=-1)fd=new_fd;
-	else fd=sockfd;
+	if(new_fd==-1)fd=sockfd;
+	else fd=new_fd;
 	// memcpy(command_buffer,buffer.data(),buffer.size()*sizeof(uchar));
 	// command_buffer[buffer.size()]=0x0;
-	int size=send(fd, buffer.data(),buffer.size(),0);
+	int size=send(fd, buffer.data(),command,0);
 	return size;
 }
 int mytcp::sendbuffer(const std::string & buffer,int _size){
 	int fd;
-	if(new_fd!=-1)fd=new_fd;
+	if(new_fd==-1)fd=sockfd;
 	else fd=new_fd;
-	int size=send(fd, buffer.data(),buffer.size(),0);
+	int size=send(fd, buffer.data(),image_size,0);
 	return size;
 }
 int mytcp::sendimage(const cv::Mat &image,int _size){
@@ -124,7 +126,7 @@ int mytcp::sendimage(const cv::Mat &image,int _size){
 	cv::imencode(".jpg", image,data_encode,quality);
 	int i=0,size=0;
 	for(i=1;i<data_encode.size();i++)
-			image_buffer[i]=data_encode[i];
+			image_buffer[i]=data_encode[i-1];
 
 	//befor send imag ,send image size
 	std::cout<<sendcommand(std::to_string(i))<<"\t"<<i<<std::endl;

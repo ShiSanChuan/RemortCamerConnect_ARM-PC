@@ -3,13 +3,13 @@
 
 src/opencvdetect/CMakeFiles/opencvdetect.dir/HoughLine.cpp.o
  ../include/detect.h
- /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp
+ /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/HoughLine.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/Inpaint.cpp.o
- /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
+ /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/SURF.cpp.o
- /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
+ /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/calcOpicalFlow.cpp.o
  ../include/detect.h
- /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
+ /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
 src/opencvdetect/CMakeFiles/opencvdetect.dir/goodFeatures.cpp.o
- /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp
+ /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp

@@ -1,4 +1,4 @@
-# Install script for directory: /home/ssc/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect
+# Install script for directory: /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
