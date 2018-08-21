@@ -95,7 +95,7 @@ int main(int argc, const char** argv)
 			}else {
 				calcOptialFlow(gray,detect_point);
 				std::cout<<"X: "<<detect_point.x<<"\tY: "<<detect_point.y<<std::endl;
-				cv::circle(image, detect_point, 3, cv::Scalar(0,255,0));
+				cv::circle(image, detect_point, 4, cv::Scalar(0,0,255));
 			
 			}
 			cv::imshow("pic", image);
