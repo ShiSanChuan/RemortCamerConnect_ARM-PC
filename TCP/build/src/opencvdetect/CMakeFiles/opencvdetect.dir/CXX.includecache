@@ -16,27 +16,3 @@ iostream
 detect.h
 /home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/detect.h
 
-/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/Inpaint.cpp
-iostream
--
-opencv2/opencv.hpp
--
-
-/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/SURF.cpp
-iostream
--
-opencv2/opencv.hpp
--
-opencv2/nonfree/nonfree.hpp
--
-
-/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/calcOpicalFlow.cpp
-detect.h
-/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/detect.h
-
-/home/shisanchuan/C++work/RemortCamerConnect_ARM-PC/TCP/src/opencvdetect/goodFeatures.cpp
-iostream
--
-opencv2/opencv.hpp
--
-
