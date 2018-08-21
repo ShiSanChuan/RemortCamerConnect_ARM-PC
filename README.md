@@ -95,3 +95,19 @@ cd build/src
 	FIND_PACKAGE ( Threads REQUIRED )
 	TARGET_LINK_LIBRARIES(camer ${OpenCV_LIBS} ${CMAKE_THREAD_LIBS_INIT})
 	```
+- HoughCircles Function Promble
+	 C++: `void HoughCircles(InputArray image, OutputArray circles, int method, double dp, double minDist, double param1=100, double param2=100, int minRadius=0, int maxRadius=0 )`,if set minRsdius and MaxRadius ,when image have not a Circle in it,this function will faill by circles is empty,so it is better if set it ignore,and select circle after:
+	 ```C++
+	 cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.cols/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT);		
+	for(int i=0;i<circles.size();i++)
+		if(circles[i][2]>40&&circles[i][2]<80)return circles[i];
+	 ```
+- PC or USBcamer Problem
+	USBcamer&PC'camer will have a selfdetect before run,so it is better used `cap.read(image)`,and if it return false,we decide not send it.
+- imdecode&imencode Problem
+	if imdecode is fail,it will return a empty Mat,`The function reads an image from the specified buffer in the memory. If the buffer is too short or contains invalid data, the empty matrix/image is returned`,so if picture reciver failure ,ignore this recv is better.
+	```C++
+	cv::Mat deimage=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
+	if(deimage.empty())return -1;
+	else image=deimage;
+	```
