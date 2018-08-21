@@ -22,7 +22,12 @@ int main(int argc, const char** argv)
 		mytcp client(addr,port);
 		client.connectserver();
 		while(1){
-			cap>>frame;
+			if(cap.read(frame)==false)continue;
+			// for(int k=0;k<4;k++){//加入随机圈
+			// 	int i=rand()%frame.rows;
+			// 	int j=rand()%frame.cols;
+			// 	cv::circle(frame, cv::Point(i,j), 4, cv::Scalar(0,0,255));
+			// }
 			int size=client.sendimage(frame);
 		}
 		return 0;
@@ -30,7 +35,7 @@ int main(int argc, const char** argv)
 
 	if(string(argv[1])=="-s"){
 		cv::Mat image,gray;
-		cv::Vec3f Circle;
+		cv::Vec3f Circle(-1,-1,-1);
 		int port=atoi(argv[2]);
 		mytcp server(port);
 		server.newclient();
@@ -57,16 +62,17 @@ int main(int argc, const char** argv)
 		// });
 
 		while(char(cv::waitKey(1)!='q')){
-			int size=server.recvimage(image);
-			cv::cvtColor(image, gray,cv::COLOR_RGB2GRAY);
-			Circle=findCirclse(gray);
-			if(Circle[0]!=-1){
+			if(server.recvimage(image)<0)continue;
+			if(image.channels()!=1)
+				cv::cvtColor(image, gray,cv::COLOR_BGR2GRAY);
+			if(detect_point.x==.0&&detect_point.y==.0){
+				Circle=findCirclse(gray);
+			}
+			if(Circle[0]!=-1&&detect_point.x==.0&&detect_point.y==.0){//计算多次出现的圆形，建立一个跟踪点
 				cv::circle( image, cv::Point(Circle[0],Circle[1]), 3, cv::Scalar(0,255,0), -1, 8, 0 );
 				cv::circle( image, cv::Point(Circle[0],Circle[1]), Circle[2], cv::Scalar(0,0,255), 3, 8, 0 );
-			}
-			if(detect_point.x==.0&&detect_point.y==.0){//计算多次出现的圆形，建立一个跟踪点
 				calaFlow.push_back(cv::Point2f((float)Circle[0],(float)Circle[1]));
-				if(calaFlow.size()>3){
+				if(calaFlow.size()>4){//计算点均值，稳定的圆既是跟踪目标
 					cv::Point2f mean(.0,.0);
 					for(int i=0;i<calaFlow.size();i++){
 						mean.x+=calaFlow[i].x;
@@ -85,18 +91,21 @@ int main(int argc, const char** argv)
 					cov.y=cov.y/calaFlow.size();
 					// std::cout<<"x: "<<mean.x<<"\ty: "<<mean.y<<std::endl;
 					// std::cout<<"cov: "<<cov.x<<"\t"<<cov.y<<std::endl;
-					if(cov.x<5&&cov.y<5){
+					if(cov.x<3&&cov.y<3){//稳定的圆点
 						detect_point.x=mean.x;
 						detect_point.y=mean.y;
 						calcOptialFlow(gray,detect_point);
 					}
 					calaFlow.clear();
 				}
-			}else {
+			}else if(detect_point.x!=.0&&detect_point.y!=.0){
 				calcOptialFlow(gray,detect_point);
 				std::cout<<"X: "<<detect_point.x<<"\tY: "<<detect_point.y<<std::endl;
-				cv::circle(image, detect_point, 4, cv::Scalar(0,0,255));
-			
+				cv::circle(image, detect_point, 4, cv::Scalar(0,0,255),2,8,0);
+			}
+			//目标即将偏离，重新检测
+			if(detect_point.x<20||detect_point.x>image.cols-20||detect_point.y<20||detect_point.y>image.rows-20){
+				detect_point=cv::Point2f(.0,.0);
 			}
 			cv::imshow("pic", image);
 		}

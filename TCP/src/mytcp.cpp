@@ -92,13 +92,15 @@ int mytcp::recvimage(cv::Mat & image,int _size){
 	for(int recv_size=1;size<_size&&recv_size!=0;size+=recv_size)
 		recv_size=recv(new_fd, image_buffer+recv_size,image_size,0);
 
-	if(size<10000)return -1;
+	if(size<5000)return -1;
 
 	for(int i=1;i<size;i++)
 			data_decode.push_back(image_buffer[i]);
 
 
-	image=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
+	cv::Mat deimage=cv::imdecode(data_decode,CV_LOAD_IMAGE_COLOR);
+	if(deimage.empty())return -1;
+	else image=deimage;
 	return size;
 }
 int mytcp::sendcommand(const std::string & buffer,int _size){

@@ -33,12 +33,12 @@ cv::Vec3f findCirclse(cv::Mat &gray){
 	std::vector<cv::Vec3f> circles;
 	cv::Mat grayblur;
 	cv::blur(gray, grayblur, cv::Size(3,3));
-	cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.rows/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT,10,50);		
-	if(circles.size()){
-		return circles[0];
-	}
-	circles.push_back(cv::Vec3f(-1,-1,-1));
-	return circles[0];
+	//设置houghCircles时设置最小和最大圆时，由于条件太过限制，在没有圆时会时circle为空从而使程序错误
+	cv::HoughCircles(grayblur, circles, CV_HOUGH_GRADIENT,2, grayblur.cols/4,CV_HOUGH_GRADIENT ,CV_HOUGH_GRADIENT);		
+	for(int i=0;i<circles.size();i++)
+		if(circles[i][2]>40&&circles[i][2]<80)return circles[i];
+	// circles.push_back(cv::Vec3f(-1,-1,-1));
+	return cv::Vec3f(-1,-1,-1);
 }
 
 
